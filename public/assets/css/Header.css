@@ -1,0 +1,120 @@
+/* header {
+    background-color: white;
+    color: #192C78;
+    padding: 20px;
+    text-align: center;
+    height: 65px;
+    text-align: left;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    border: #478fe1 solid 2px;
+}
+
+.name{
+    font-size: 30px;
+    color: #192C78;
+}
+nav{
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #192C78;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+} */
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-column-gap: 15%;
+    align-items: center;
+    height: 8vh; 
+    position: fixed;
+    width: 100%;
+    transition: all .3s;
+}
+.logo{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 15%; 
+}
+.logo a{
+
+    text-decoration: none;
+    color: white;
+    cursor: default;
+
+
+}
+.menu{
+    display:flex;
+    grid-template-columns: repeat(6,1fr);
+    justify-content: space-between;
+    align-items: cenrter;
+    font-weight: bold;
+    margin-right: 5%;
+
+}
+.menu li {
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+
+}
+.menu a{
+    color:rgb(255, 255, 255) ;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all .3s;
+}
+.menu a:hover{
+    /* color:rgba(184, 184, 184, 0.696) ; */
+    color: #E63B60;
+    transition: all .3s;
+}
+.scrolled-nav{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-column-gap: 15%;
+    align-items: center;
+    background-color: #192a76; 
+    position: fixed;
+    width: 100%;  
+    height: 60px;   
+    box-shadow: 0 2px 1rem #042299;
+    transition: all .3s;    
+    z-index: 1;
+}
+.scrolled-nav .logo a{
+    color: white;
+}
+.scrolled-nav .menu a{
+    color: white;
+    padding: 10px;  
+    transition: all .3s; 
+}
+.scrolled-nav .menu a:hover{
+
+    transition: all .3s;
+    color: #E63B60;
+}

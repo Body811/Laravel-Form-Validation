@@ -1,0 +1,292 @@
+:root {
+    --main-background-color: #4168d5;
+    --container-background-color: #FFFFFF;
+    --accent-color: #192C78;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:focus {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /* background-color: var(--main-background-color); */
+    background: linear-gradient(to bottom right, #89B7EB, #192C78);
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #0d2fb5;
+
+}
+
+
+#blur {
+    width: 100%;
+    height: inherit;
+}
+
+span {
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.registeration-container {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    height: max-content;
+    background-color: var(--container-background-color);
+    border-radius: 10px;
+    border: #478fe1 solid 2px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+
+}
+
+.header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: var(--accent-color) solid 1px;
+}
+
+.form {
+    margin: 20px;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em 1em;
+
+}
+
+.form-group {
+    margin: 10px;
+}
+
+input {
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 100%;
+    padding: 8px;
+    transition: 0.2s ease-in-out;
+}
+
+input::placeholder {
+    color: #637d9a;
+}
+
+label {
+    margin-left: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.birth-date input {
+    width: 70%;
+    color: #637d9a;
+}
+
+.birth-date button {
+    height: 37.33px;
+    width: 60px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(to bottom right, #89B7EB, #192C78);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.birth-date button:hover,
+.submit input:hover {
+    background: linear-gradient(to bottom right, #89b7ebd4, #192c78c9);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.image label {
+    padding-left: 8px;
+}
+
+.submit {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit input {
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(to bottom right, #89B7EB, #192C78);
+    color: white;
+    cursor: pointer;
+    width: 30%;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Api pop up styling  */
+.active {
+    filter: blur(20px);
+    transition: 0.3s;
+    pointer-events: none;
+    user-select: none;
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 650px;
+    max-height: 300px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    padding: 20px;
+    overflow: auto;
+    overflow-x: auto;
+    transition: 0.2s ease-in-out;
+    border: #0d2fb5 solid 3px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.popup-container-show {
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-container h1 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.popup-text p {
+    margin: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 13px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #0d2fb5;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+
+/* client side verficatation  */
+.success input {
+    border: #09c372 solid 2px;
+    transition: 0.2s ease-in-out;
+
+}
+
+.error input {
+    border: #ff3860 solid 2px;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.error {
+    color: #ff3860;
+    font-size: 9px;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .registeration-container {
+        width: fit-content;
+        height: auto;
+
+    }
+
+    .form-group {
+        margin: 0;
+    }
+
+    .input-container {
+
+        grid-gap: 0.8em 1em;
+
+    }
+
+    label {
+        font-size: 12px;
+
+    }
+
+    input {
+        width: auto;
+        height: auto;
+    }
+
+    .birth-date input {
+        width: 50%;
+    }
+
+    .form {
+        margin: 10px;
+    }
+
+    .submit {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .submit input {
+        border: none;
+        border-radius: 6px;
+        background: linear-gradient(to bottom right, #89B7EB, #192C78);
+        color: white;
+        cursor: pointer;
+        width: 189px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .popup-container-show {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
